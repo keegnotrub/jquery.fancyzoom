@@ -11,8 +11,8 @@
 
 $.extend(jQuery.easing, {
   easeInOutCubic: function (x, t, b, c, d) {
-		if ((t/=d/2) < 1) return c/2*t*t*t + b;
-		return c/2*((t-=2)*t*t + 2) + b;
+    if ((t/=d/2) < 1) return c/2*t*t*t + b;
+      return c/2*((t-=2)*t*t + 2) + b;
 	}
 });
 
@@ -68,21 +68,35 @@ $.fn.fancyZoom = function(settings) {
     var pFrame = 0;
     var eGeometry, wGeometry;
     
-    var zoom_spin = $(document.createElement("div"));
-    zoom_spin.attr("id", "zoom_spin");
-    $("body").append(zoom_spin);
+    var zoom_spin, zoom, zoom_img, zoom_close;
     
-    var zoom = $(document.createElement("div"));
-    zoom.attr("id", "zoom");
-    $("body").append(zoom);
+    zoom_spin = $("#zoom_spin");
+    if (zoom_spin.length == 0) {
+      zoom_spin = $(document.createElement("div"));
+      zoom_spin.attr("id", "zoom_spin");
+      $("body").append(zoom_spin);
+    }
+    
+    zoom = $("#zoom");
+    if (zoom.length == 0) {
+      zoom = $(document.createElement("div"));
+      zoom.attr("id", "zoom");
+      $("body").append(zoom);
+    }
   
-    var zoom_img = $(document.createElement("img"));
-    zoom_img.attr("id", "zoom_img");
-    zoom.append(zoom_img);
+    zoom_img = $("#zoom_img");
+    if (zoom_img.length == 0) {
+      zoom_img = $(document.createElement("img"));
+      zoom_img.attr("id", "zoom_img");
+      zoom.append(zoom_img);
+    }
           
-    var zoom_close = $(document.createElement("div"));
-    zoom_close.attr("id", "zoom_close");
-    zoom.append(zoom_close);
+    zoom_close = $("#zoom_close");
+    if (zoom_close.length == 0) {
+      zoom_close = $(document.createElement("div"));
+      zoom_close.attr("id", "zoom_close");
+      zoom.append(zoom_close);
+    }
     
     this.preload = function(e) {
       var href = this.getAttribute("href");
