@@ -11,7 +11,7 @@ Download
 
 Easiest way to get the latest version is to just
 [download](https://github.com/krug/jquery.fancyzoom/zipball/master)
-the `kurg-jquery.fancyzoom.zip` file straight from github. Once
+the `krug-jquery.fancyzoom.zip` file straight from github. Once
 unzipped, place the contents of the `js`, `css` and `img` folders
 accordingly into your site.
 
