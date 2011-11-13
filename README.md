@@ -36,10 +36,10 @@ with a class to have the become lightboxed.
     <a href="img/big.jpg" class="fancy"><img src="img/small.jpg"/></a>
 
 Then on your Javascript's `document` ready you can fire the jQuery
-`fancyzoom` selector.
+`fancyZoom` selector.
 
     $(document).ready(function() {
-        $("a.fancy").fancyzoom();
+        $("a.fancy").fancyZoom();
     });
 
 FancyZoom takes only one option `minBorder` which allows you to
@@ -47,7 +47,7 @@ specify how much border should always be around your images once
 lighboxed. This value is `90` pixels by default.
 
     $(document).ready(function() {
-        $("a.fancy").fancyzoom({
+        $("a.fancy").fancyZoom({
             minBorder: 90
         });
     });
