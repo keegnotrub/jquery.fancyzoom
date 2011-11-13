@@ -6,6 +6,14 @@ jQuery plugin of Cabel's
 version of FanyZoom attempts to be as minimual as possible. No gallery
 or caption support. Just a simple zoom of linked images.
 
+Download
+--------
+
+Easiest way to get the latest version is to just
+[download](https://github.com/krug/jquery.fancyzoom/zipball/master)
+the `zip` file straight from github. Once unzipped, place the contents
+of the `js`, `css` and `img` folders accordingly into your site.
+
 To Use
 ------
 
