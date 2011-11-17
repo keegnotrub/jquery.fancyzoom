@@ -142,7 +142,7 @@ $.fn.fancyZoom = function(settings) {
 
     function startSpinner(from) {
       zoom_spin.css({
-        left: (wGeometry.width / 2) + "px",
+        left: ((wGeometry.width / 2) + wGeometry.scrollX) + "px",
         top: ((wGeometry.height / 2) + wGeometry.scrollY) + "px",
         backgroundPosition: "0 0",
         display: "block"
@@ -173,7 +173,7 @@ $.fn.fancyZoom = function(settings) {
       }
       
       var endTop = (wGeometry.height/2) - (endH/2) + wGeometry.scrollY;
-      var endLeft = (wGeometry.width/2) - (endW/2);
+      var endLeft = (wGeometry.width/2) - (endW/2) + wGeometry.scrollX;
 
       zoom_close.hide();
       zoom.hide().css({
