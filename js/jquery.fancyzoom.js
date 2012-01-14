@@ -129,7 +129,7 @@ $.fn.fancyZoom = function(settings) {
     
     function runSpinner(from) {
       if (preloading) {
-        zoom_spin.css("backgroundPosition", "0 " + pFrame * 50 + "px");
+        zoom_spin.css("backgroundPosition", "0px " + (pFrame * 50) + "px");
         if (++pFrame == 12) pFrame = 0;
       }
       else {
@@ -144,7 +144,7 @@ $.fn.fancyZoom = function(settings) {
       zoom_spin.css({
         left: ((wGeometry.width / 2) + wGeometry.scrollX) + "px",
         top: ((wGeometry.height / 2) + wGeometry.scrollY) + "px",
-        backgroundPosition: "0 0",
+        backgroundPosition: "0px 0px",
         display: "block"
       });
       pFrame = 1;
