@@ -28,12 +28,12 @@ You will also want to include the `fancyzoom.css` file insead your `<head>`
 section. Don't forget to change the background image paths if you place
 contents of the `img` folder in an different directory.
 
-    <link rel="stylesheet" href="css/fancyzoom.css"/>
+    <link rel="stylesheet" href="css/fancyzoom.css">
     
 Now when you create links to images in your `HTML`, you can flag them
 with a class to have the become lightboxed.
 
-    <a href="img/big.jpg" class="fancy"><img src="img/small.jpg"/></a>
+    <a href="img/big.jpg" class="fancy"><img src="img/small.jpg"></a>
 
 Then on your Javascript's `document` ready you can fire the jQuery
 `fancyZoom` selector.
