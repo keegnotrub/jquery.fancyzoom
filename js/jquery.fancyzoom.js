@@ -7,7 +7,7 @@
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  */
-;(function($) {
+(function ($) {
 
 $.extend(jQuery.easing, {
   easeInOutCubic: function (x, t, b, c, d) {
@@ -46,21 +46,21 @@ $.fn.fancyZoom = function(settings) {
     do {
       elemX += elemFind.offsetLeft;
       elemY += elemFind.offsetTop;
-    } while ( elemFind = elemFind.offsetParent )
+    } while ( (elemFind = elemFind.offsetParent) );
   
     return {left: elemX, top: elemY, width: elemW, height: elemH};
-  };
+  }
 
   function windowGeometry() {
     var w = window.innerWidth||document.documentElement&&document.documentElement.clientWidth||document.body.clientWidth||0;
     var h = window.innerHeight||document.documentElement&&document.documentElement.clientHeight||document.body.clientHeight||0;
     var x = window.pageXOffset||document.documentElement&&document.documentElement.scrollLeft || document.body.scrollLeft||0;
     var y = window.pageYOffset||document.documentElement&&document.documentElement.scrollTop || document.body.scrollTop||0;
-    return { width: w, height: h, scrollX: x, scrollY: y};
-  };
+    return { width: w, height: h, scrollX: x, scrollY: y };
+  }
   
-  function FancyZoom(options) {
-    var options = options;  
+  function FancyZoom(opts) {
+    var options = opts;  
     var zooming = false;
     var preloading = false;
     var pImage = new Image();
@@ -71,28 +71,28 @@ $.fn.fancyZoom = function(settings) {
     var zoom_spin, zoom, zoom_img, zoom_close;
     
     zoom_spin = $("#zoom_spin");
-    if (zoom_spin.length == 0) {
+    if (zoom_spin.length === 0) {
       zoom_spin = $(document.createElement("div"));
       zoom_spin.attr("id", "zoom_spin");
       $("body").append(zoom_spin);
     }
     
     zoom = $("#zoom");
-    if (zoom.length == 0) {
+    if (zoom.length === 0) {
       zoom = $(document.createElement("div"));
       zoom.attr("id", "zoom");
       $("body").append(zoom);
     }
   
     zoom_img = $("#zoom_img");
-    if (zoom_img.length == 0) {
+    if (zoom_img.length === 0) {
       zoom_img = $(document.createElement("img"));
       zoom_img.attr("id", "zoom_img");
       zoom.append(zoom_img);
     }
           
     zoom_close = $("#zoom_close");
-    if (zoom_close.length == 0) {
+    if (zoom_close.length === 0) {
       zoom_close = $(document.createElement("div"));
       zoom_close.attr("id", "zoom_close");
       zoom.append(zoom_close);
@@ -116,7 +116,7 @@ $.fn.fancyZoom = function(settings) {
       eGeometry = elementGeometry(this);
       
       if (preloading) {
-        if (pTimer == 0) {
+        if (pTimer === 0) {
           startSpinner(this);
         }
       }
@@ -138,7 +138,7 @@ $.fn.fancyZoom = function(settings) {
         zoom_spin.hide();
         zoomIn(from);
       }
-    };
+    }
 
     function startSpinner(from) {
       zoom_spin.css({
@@ -151,7 +151,7 @@ $.fn.fancyZoom = function(settings) {
       pTimer = setInterval(function() {
         runSpinner(from);
       }, 100);
-    };
+    }
     
     function zoomIn(from) {
       if (zooming) return false;
@@ -162,7 +162,7 @@ $.fn.fancyZoom = function(settings) {
       var endW = pImage.width;
       var endH = pImage.height;
       
-  		var sizeRatio = endW / endH;
+      var sizeRatio = endW / endH;
       if (endW > wGeometry.width - options.minBorder) {
         endW = wGeometry.width - options.minBorder;
         endH = endW / sizeRatio;
@@ -196,7 +196,7 @@ $.fn.fancyZoom = function(settings) {
         $(document).keyup(closeOnEscape);
         zooming = false;
       });
-    };
+    }
     
     function zoomOut() {
       if (zooming) return false;
@@ -216,14 +216,14 @@ $.fn.fancyZoom = function(settings) {
       zoom.unbind('click', zoomOut);
       zoom_close.unbind('click', zoomOut);
       $(document).unbind('keyup', closeOnEscape);
-    };
+    }
         
     function closeOnEscape(event){
       if (event.keyCode == 27) {
         zoomOut();
       }
-    };
-  };
+    }
+  }
 };
 
 })(jQuery);
