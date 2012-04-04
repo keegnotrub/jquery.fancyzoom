@@ -18,10 +18,10 @@ accordingly into your site.
 To Use
 ------
 
-Include [`js/jquery-1.6.2.min.js`](http://jquery.com) and `js/jquery.fancyzoom.min.js`
+Include [`js/jquery-1.7.2.min.js`](http://code.jquery.com/jquery-1.7.2.min.js) and `js/jquery.fancyzoom.min.js`
 inside your `<head>` section as shown.
 
-    <script src="js/jquery-1.6.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="js/jquery.fancyzoom.min.js"></script>
     
 You will also want to include the `fancyzoom.css` file insead your `<head>`
