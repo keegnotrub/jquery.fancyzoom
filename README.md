@@ -10,18 +10,18 @@ Download
 --------
 
 Easiest way to get the latest version is to just
-[download](https://github.com/krug/jquery.fancyzoom/zipball/master)
-the `krug-jquery.fancyzoom.zip` file straight from github. Once
+[download](https://github.com/keegnotrub/jquery.fancyzoom/zipball/master)
+the `keegnotrub-jquery.fancyzoom.zip` file straight from github. Once
 unzipped, place the contents of the `js`, `css` and `img` folders
 accordingly into your site.
 
 To Use
 ------
 
-Include [`js/jquery-1.7.2.min.js`](http://code.jquery.com/jquery-1.7.2.min.js) and `js/jquery.fancyzoom.min.js`
+Include [`js/jquery-1.11.0.min.js`](http://code.jquery.com/jquery-1.11.0.min.js) and `js/jquery.fancyzoom.min.js`
 inside your `<head>` section as shown.
 
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.fancyzoom.min.js"></script>
     
 You will also want to include the `fancyzoom.css` file insead your `<head>`
@@ -56,4 +56,4 @@ Contact & Help
 --------------
 
 If you have questions or find a bug, you can always
-[open an issue](https://github.com/krug/jquery.fancyzoom/issues) on github.
+[open an issue](https://github.com/keegnotrub/jquery.fancyzoom/issues) on github.
