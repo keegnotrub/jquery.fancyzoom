@@ -9,11 +9,7 @@ or caption support. Just a simple zoom of linked images.
 Download
 --------
 
-Easiest way to get the latest version is to just
-[download](https://github.com/keegnotrub/jquery.fancyzoom/zipball/master)
-the `keegnotrub-jquery.fancyzoom.zip` file straight from github. Once
-unzipped, place the contents of the `js`, `css` and `img` folders
-accordingly into your site.
+Easiest way to get the latest version is to just download the [latest release](https://github.com/keegnotrub/jquery.fancyzoom/releases) straight from github. Once unzipped, place the contents of the `js`, `css` and `img` folders accordingly into your site.
 
 To Use
 ------
