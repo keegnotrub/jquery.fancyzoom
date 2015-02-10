@@ -30,11 +30,12 @@
     });
     
     function elementGeometry(elemFind) {
-      if (elemFind.childNodes.length > 0) {
-        elemFind = elemFind.childNodes[0];
-      }
-
       var $elemFind = $(elemFind);
+
+      if ($elemFind.children().length > 0) {
+        $elemFind = $elemFind.children(":first");
+      }
+      
       var elemX = $elemFind.offset().left;
       var elemY = $elemFind.offset().top;
       var elemW = $elemFind.width() || 50;
